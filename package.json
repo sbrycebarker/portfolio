@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/sbrycebarker/responsiveportfolio#readme",
   "dependencies": {
-    "node-sass": "^4.9.2"
+    "node-sass": "^7.0.0"
   }
 }
