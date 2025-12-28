@@ -66,6 +66,7 @@
     background: darken($primary-color, 5);
     list-style: none;
     transform: translate3d(0, -100%, 0);
+    box-shadow: $shadow-xl;
     @include easeOut;
 
     &.show {
@@ -91,7 +92,8 @@
       background: url('../imgs/sergio.jpg');
       background-size: cover;
       border-radius: 50%;
-      border: solid 1px white
+      border: solid 1px white;
+      box-shadow: $shadow-lg;
     }
   }
 
@@ -114,14 +116,20 @@
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     font-weight: 300;
     color: set-text-color($primary-color);
     text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
     @include easeOut;
 
     &:hover {
       color: $secondary-color;
+      background: rgba($secondary-color, 0.1);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transform: translateX(5px);
+      box-shadow: $shadow-md;
     }
 
   }
