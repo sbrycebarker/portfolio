@@ -169,50 +169,122 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 75px;
+  grid-gap: 2rem;
   grid-template-columns: repeat(5, 2fr);
   position: relative;
-  text-align: center;
   box-sizing: border-box;
 
   .item {
     box-shadow: $shadow-md;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
     @include easeOut;
 
     &:hover {
       box-shadow: $shadow-hover;
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+    }
+  }
+
+  .project-image-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
+      opacity: 0;
+      @include easeOut;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
   }
 
   img {
     width: 100%;
-    height: auto;
-    border: 4px #fff solid;
-    box-sizing: border-box;
-    position: relative;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    @include easeOut;
 
     &:hover {
-      opacity: 0.8;
-      border-color: $secondary-color;
-      @include easeOut;
-      box-sizing: border-box;
+      transform: scale(1.05);
+    }
+  }
+
+  .project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #000;
+    text-shadow: none;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, lighten($secondary-color, 40%), lighten($secondary-color, 35%));
+    color: darken($secondary-color, 10%);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: $shadow-sm;
+    @include easeOut;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+
+    a {
+      flex: 1;
+      text-align: center;
+      padding: 0.65rem 1rem;
+      font-size: 0.9rem;
     }
   }
 
   .details {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    border: 1px solid black;
-    color: black;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: $shadow-sm;
-  }
-  .p {
-
+    display: none;
   }
 }
 
