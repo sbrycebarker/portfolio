@@ -1,0 +1,11 @@
+# robots.txt for sergiobarker.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private directories (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://sergiobarker.com/sitemap.xml
