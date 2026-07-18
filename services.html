@@ -36,7 +36,119 @@
   <link rel="preload" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/main.css">
-  <title>Web Development Services | Sergio Barker</title>
+  <title>Web Development Services | Sergio Barker — Provo, Utah</title>
+  <style>
+    .faq-section {
+      max-width: 760px;
+      margin: 3rem auto 1rem;
+    }
+    .faq-heading {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      margin-bottom: 1.25rem;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 0.65rem; }
+    .faq-item {
+      background: rgba(255,255,255,0.92);
+      border-radius: 8px;
+      border-left: 4px solid #ff2800;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: #111;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-question:hover { background: rgba(255,40,0,0.04); }
+    .faq-icon {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #ff2800;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 1.25rem 1rem;
+    }
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.7;
+    }
+    .faq-answer.open { display: block; }
+  </style>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most small business websites take 2–3 weeks from start to launch. Larger projects with more pages or custom features may take 4–6 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I own my website after you build it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — 100%. You own the code, the domain, and all the content. Everything transfers to you outright when the project is done."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to provide to get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basics: your logo, any photos you want to use, your business info (address, phone, hours), and a general idea of what pages you need."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer ongoing maintenance after launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Monthly maintenance starts at $75/month and covers updates, security checks, uptime monitoring, and priority support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes you different from Wix or Squarespace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I build custom sites that load faster, rank better on Google, and are built specifically around your business — not a generic template. You also own everything outright with no ongoing subscription fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a website cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most small businesses, a professional 5-page website runs $600–$1,500. The Small Business Starter Package is $699 flat and covers everything a local business needs to get found online."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body id="bg-img">
@@ -91,7 +203,7 @@
           <li>Google-ready from day one</li>
           <li>Hosting setup included</li>
         </ul>
-        <p class="service-price">Starting at $800</p>
+        <p class="service-price">Starting at $600</p>
       </div>
 
       <div class="service-card">
@@ -161,6 +273,75 @@
         <i class="fas fa-envelope"></i> Request a $25 Website Audit
       </a>
     </div>
+
+    <section class="faq-section">
+      <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does it take to build a website?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most small business websites take 2–3 weeks from start to launch. That includes design, development, revisions, and getting everything live. Larger projects with more pages or custom features may take 4–6 weeks. I'll give you a realistic timeline before we start so there are no surprises.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I own my website after you build it?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — 100%. You own the code, the domain, and all the content. I don't lock you into any proprietary platform or charge you to access your own files. When the project is done, everything transfers to you outright.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What do I need to provide to get started?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The basics: your logo (if you have one), any photos you want to use, your business info (address, phone, hours), and a general idea of what pages you need. Don't worry if you don't have everything — I can work with what you have and help fill in the gaps.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you offer ongoing maintenance after launch?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. I offer monthly maintenance starting at $75/month, which covers updates, security checks, uptime monitoring, and priority support if something breaks. It's completely optional — some clients manage their own sites after launch, and that's fine too.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What makes you different from Wix or Squarespace?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Website builders are great for getting something online fast, but they come with real tradeoffs: slow load times, limited SEO control, monthly fees forever, and a site that looks like thousands of others. I build custom sites that load faster, rank better on Google, and are built specifically around your business — not a generic template. And when you're done paying me, you're done. No ongoing subscription just to keep your site alive.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much does a website cost?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>For most small businesses, a professional 5-page website runs $600–$1,500 depending on complexity. My Small Business Starter Package is $699 flat and covers everything a local business needs to get found online. If you're not sure what you need, a $25 website audit is a good starting point — I'll tell you exactly what would make the biggest difference for your business.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer id="main-footer">
@@ -168,6 +349,15 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        btn.nextElementSibling.classList.toggle('open', !expanded);
+      });
+    });
+  </script>
 </body>
 
 </html>
